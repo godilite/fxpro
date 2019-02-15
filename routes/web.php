@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/frontend/contact', 'FrontendController@contact')->name('contact');
+Route::get('/frontend/about', 'FrontendController@about')->name('about');
+Route::get('contact-us', 'ContactUSController@contactUS');
+Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
+Route::post('subscribe',['as'=>'subscriber','uses'=>'ContactUSController@subscribe']);

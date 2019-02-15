@@ -1,98 +1,492 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+    @extends('layouts.app')
+    @section('slider')
+    <div id="header" class="HeaderAdjust">
+        <div class="header-slider show-slider-controls">
+            <div class="header-slider--item bg--overlay" data-bg-src="img/header-slider-bg-img/01.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 header-item-content-holder">
+                            <div class="vc-parent">
+                                <div class="vc-child">
+                                    <div class="header-item-content">
+                                        <h2>Lorem Ipsum Dolor</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis dolores ducimus pariatur optio sint autem odio.</p>
+                                        <div class="list clearfix">
+                                            <p><i class="fa fa-check"></i>Lorem ipsum dolor sit</p>
+                                            <p><i class="fa fa-check"></i>Lorem ipsum dolor sit</p>
+                                            <p><i class="fa fa-check"></i>Lorem ipsum dolor sit</p>
+                                            <p><i class="fa fa-check"></i>Lorem ipsum dolor sit</p>
+                                        </div>
+                                        <div class="price"> <a href="#" class="btn btn-lg btn-custom-reverse">View Details</a> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 header-item-img hidden-sm hidden-xs">
+                            <div class="vc-parent">
+                                <div class="vc-child-bottom">
+                                    <figure class="clearfix"> <img src="img/header-slider-img/01.png" alt="" class="img-responsive owl-fadeInUp">
+                                        <figcaption>
+                                            <div class="header-price-tag header-price-tag-1 owl-fadeInLeft">
+                                                <p>Starting at<span>$4.99</span>/year</p>
+                                            </div>
+                                            <div class="header-price-tag header-price-tag-2 owl-fadeInRight">
+                                                <p>Up To<span>10%</span>OFF</p>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+            </div>
+            <div class="header-slider--item bg--overlay" data-bg-src="img/header-slider-bg-img/02.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 header-item-content-holder">
+                            <div class="vc-parent">
+                                <div class="vc-child">
+                                    <div class="header-item-content">
+                                        <h2>Lorem Ipsum Dolor</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis dolores ducimus pariatur optio sint autem odio.</p>
+                                        <div class="list clearfix">
+                                            <p><i class="fa fa-check"></i>Lorem ipsum dolor sit</p>
+                                            <p><i class="fa fa-check"></i>Lorem ipsum dolor sit</p>
+                                            <p><i class="fa fa-check"></i>Lorem ipsum dolor sit</p>
+                                            <p><i class="fa fa-check"></i>Lorem ipsum dolor sit</p>
+                                        </div>
+                                        <div class="price"> <a href="#" class="btn btn-lg btn-custom-reverse">View Details</a> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 header-item-img hidden-sm hidden-xs">
+                            <div class="vc-parent">
+                                <div class="vc-child-bottom">
+                                    <figure class="clearfix"> <img src="img/header-slider-img/02.png" alt="" class="img-responsive owl-fadeInUp">
+                                        <figcaption>
+                                            <div class="header-price-tag header-price-tag-1 owl-fadeInLeft">
+                                                <p>Starting at<span>$9.99</span>/year</p>
+                                            </div>
+                                            <div class="header-price-tag header-price-tag-2 owl-fadeInRight">
+                                                <p>Up To<span>10%</span>OFF</p>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+            </div>
+            <div class="header-slider--item bg--overlay" data-bg-src="img/header-slider-bg-img/03.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 header-item-content-holder">
+                            <div class="vc-parent">
+                                <div class="vc-child">
+                                    <div class="header-item-content">
+                                        <h2>Lorem Ipsum Dolor</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis dolores ducimus pariatur optio sint autem odio.</p>
+                                        <div class="list clearfix">
+                                            <p><i class="fa fa-check"></i>Lorem ipsum dolor sit</p>
+                                            <p><i class="fa fa-check"></i>Lorem ipsum dolor sit</p>
+                                            <p><i class="fa fa-check"></i>Lorem ipsum dolor sit</p>
+                                            <p><i class="fa fa-check"></i>Lorem ipsum dolor sit</p>
+                                        </div>
+                                        <div class="price"> <a href="#" class="btn btn-lg btn-custom-reverse">View Details</a> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 header-item-img hidden-sm hidden-xs">
+                            <div class="vc-parent">
+                                <div class="vc-child-bottom">
+                                    <figure class="clearfix"> <img src="img/header-slider-img/03.png" alt="" class="img-responsive owl-fadeInUp">
+                                        <figcaption>
+                                            <div class="header-price-tag header-price-tag-1 owl-fadeInLeft">
+                                                <p>Starting at<span>$49.99</span>/year</p>
+                                            </div>
+                                            <div class="header-price-tag header-price-tag-2 owl-fadeInRight">
+                                                <p>Up To<span>10%</span>OFF</p>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+    @stop
+    @section('content')
+    <div id="callToAction" data-bg-src="img/call-to-action-img/bg.png">
+        <div class="container">
+            <h2>Lorem ipsum dolor sit amet adipisicing elit.</h2> <a href="#" class="btn btn-custom-reverse">Register Now</a> </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2> </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 service-item text-center">
+                    <a href="voip-office.html">
+                        <div class="service-item-icon"> <img src="img/services-img/01.png" alt="" class="img-responsive"> </div>
+                        <div class="service-item-content">
+                            <h4>VOIP Office</h4>
+                            <p>Lorem ipsum dolor sit amet, placeat necessitatibus.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 service-item text-center">
+                    <a href="pbx-sip-trunking.html">
+                        <div class="service-item-icon"> <img src="img/services-img/02.png" alt="" class="img-responsive"> </div>
+                        <div class="service-item-content">
+                            <h4>PBX/SIP Trunking</h4>
+                            <p>Lorem ipsum dolor sit amet, placeat necessitatibus.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 service-item text-center">
+                    <a href="pbx-sip-trunking.html">
+                        <div class="service-item-icon"> <img src="img/services-img/03.png" alt="" class="img-responsive"> </div>
+                        <div class="service-item-content">
+                            <h4>Call Center</h4>
+                            <p>Lorem ipsum dolor sit amet, placeat necessitatibus.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 service-item text-center">
+                    <a href="pbx-sip-trunking.html">
+                        <div class="service-item-icon"> <img src="img/services-img/04.png" alt="" class="img-responsive"> </div>
+                        <div class="service-item-content">
+                            <h4>VOIP Connect</h4>
+                            <p>Lorem ipsum dolor sit amet, placeat necessitatibus.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 service-item text-center">
+                    <a href="pbx-sip-trunking.html">
+                        <div class="service-item-icon"> <img src="img/services-img/05.png" alt="" class="img-responsive"> </div>
+                        <div class="service-item-content">
+                            <h4>VOIP App</h4>
+                            <p>Lorem ipsum dolor sit amet, placeat necessitatibus.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 service-item text-center">
+                    <a href="pbx-sip-trunking.html">
+                        <div class="service-item-icon"> <img src="img/services-img/06.png" alt="" class="img-responsive"> </div>
+                        <div class="service-item-content">
+                            <h4>VOIP Drive</h4>
+                            <p>Lorem ipsum dolor sit amet, placeat necessitatibus.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 service-item text-center">
+                    <a href="pbx-sip-trunking.html">
+                        <div class="service-item-icon"> <img src="img/services-img/07.png" alt="" class="img-responsive"> </div>
+                        <div class="service-item-content">
+                            <h4>VFAX</h4>
+                            <p>Lorem ipsum dolor sit amet, placeat necessitatibus.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 service-item text-center">
+                    <a href="pbx-sip-trunking.html">
+                        <div class="service-item-icon"> <img src="img/services-img/08.png" alt="" class="img-responsive"> </div>
+                        <div class="service-item-content">
+                            <h4>VOIP Analytics</h4>
+                            <p>Lorem ipsum dolor sit amet, placeat necessitatibus.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="appDownload" class="bg--whitesmoke">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="app-download--img"> <img src="img/app-download-img/01.png" alt="" class="img-responsive center-block" /> </div>
+                    <div class="app-download--content">
+                        <h2>Download Our Apps</h2>
+                        <div class="btn--group">
+                            <a href="#" class="btn apple-store"> <i class="fa fa-apple"></i> <span>Download From<em>App Store</em></span> </a>
+                            <a href="#" class="btn google-play"> <i class="fa fa-android"></i> <span>Download From<em>Google Play</em></span> </a>
+                            <a href="#" class="btn windows-store"> <i class="fa fa-windows"></i> <span>Get It On<em>Windows</em></span> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="single-feature" data-bg-src="img/background-img/single-feature-2-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 single-feature--image">
+                    <figure> <img src="img/single-feature-img/01.png" alt="" class="img-responsive">
+                        <figcaption class="single-feature--price"> <span>Price</span>
+                            <p>$9.99</p><span>USD</span> </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-7 single-feature--content text--white">
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cum delectus, sunt eos esse quasi dignissimos. Minima deserunt nobis molestias voluptatum ut sunt sapiente quia? Totam consequatur, excepturi error sint.</p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit</li>
+                        <li>Lorem ipsum dolor sit</li>
+                        <li>Lorem ipsum dolor sit</li>
+                        <li>Lorem ipsum dolor sit</li>
+                    </ul> <a href="#" class="btn btn-custom-reverse">Learn More</a> </div>
+            </div>
+        </div>
+    </div>
+    <div id="phoneNumPrices">
+        <div class="container">
+            <div class="section-title">
+                <h2>Phone Number Prices</h2> </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="p-num-prices--form">
+                        <form action="#" method="get">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <h4>Where would you like to have a phone number?</h4>
+                                        <select class="PNumStockCountry SelectMenu"></select>
+                                        <select class="PNumStockCategory SelectMenu"></select>
+                                        <select name="chosenNumber" class="PNumStockNumbers SelectMenu"></select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <h4>Select a plan</h4>
+                                        <select name="chosenPlan" class="PNumPricePlans SelectMenu">
+                                            <option value="Standard;0" selected>Standard - Free (Monthly)</option>
+                                            <option value="Premium;9.95">Premium - $9.95 (Monthly)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <h4>Where should incoming calls be forwarded to?</h4>
+                                        <select class="PNumCallFPrices SelectMenu">
+                                            <option value="0" selected>Your Country</option>
+                                        </select>
+                                        <div class="p-num--cf-slider PNumCallFSlider"></div>
+                                        <div class="p-num--cf-slider-text">
+                                            <p><span class="PNumCallFMinutes">0</span> minutes</p><small>incoming calls per month.</small> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-num-prices--panel">
+                        <h3>Price</h3>
+                        <table class="PNumPricesPanelTable">
+                            <tbody>
+                                <tr class="PNumSetupFee">
+                                    <td></td>
+                                </tr>
+                                <tr class="PNumPlanPrice">
+                                    <td></td>
+                                </tr>
+                                <tr class="PNumMonthlyFee">
+                                    <td></td>
+                                </tr>
+                                <tr class="PNumInCallsPrice">
+                                    <td></td>
+                                </tr>
+                                <tr class="PNumCallFPrice">
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="sum PNumPricesSum"></p>
+                        <p class="sum-caption">Estimated monthly cost</p><a href="signup.html" class="signup--btn">Signup &amp; Try It Free</a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="single-feature" data-bg-src="img/background-img/single-feature-1-bg.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 single-feature--content">
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cum delectus, sunt eos esse quasi dignissimos. Minima deserunt nobis molestias voluptatum ut sunt sapiente quia? Totam consequatur, excepturi error sint.</p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit</li>
+                        <li>Lorem ipsum dolor sit</li>
+                        <li>Lorem ipsum dolor sit</li>
+                        <li>Lorem ipsum dolor sit</li>
+                    </ul> <a href="#" class="btn btn-custom-reverse">Learn More</a> </div>
+                <div class="col-md-5 single-feature--image">
+                    <figure> <img src="img/single-feature-img/02.png" alt="" class="img-responsive">
+                        <figcaption class="single-feature--price"> <span>Price</span>
+                            <p>$9.99</p><span>USD</span> </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cloud Switch Pricing</h2> </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="pricing-table-item">
+                        <div class="pt-head">
+                            <div class="caption">Starting At</div>
+                            <div class="pt-price-tag">$79<span>/mo</span></div>
+                            <div class="pt-plan">Basic</div>
+                        </div>
+                        <div class="pt-body">
+                            <div class="pt-features">
+                                <ul>
+                                    <li>Number of Concurrent Calls<strong>150 Concurrent Calls</strong></li>
+                                    <li>Number of Processing Cores<strong>8 Cores</strong></li>
+                                    <li>Processor Type<strong>XEON L5639</strong></li>
+                                    <li>Memory<strong>8 GB</strong></li>
+                                    <li>Bandwidth<strong>Unlimited</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pt-footer"> <a href="#" class="btn btn-custom">Buy Now</a> </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="pricing-table-item popular">
+                        <div class="pt-head">
+                            <div class="popular-indicator"> <i class="fa fa-diamond"></i> </div>
+                            <div class="caption">Starting At</div>
+                            <div class="pt-price-tag">$129<span>/mo</span></div>
+                            <div class="pt-plan">Pro</div>
+                        </div>
+                        <div class="pt-body">
+                            <div class="pt-features">
+                                <ul>
+                                    <li>Number of Concurrent Calls<strong>300 Concurrent Calls</strong></li>
+                                    <li>Number of Processing Cores<strong>16 Cores</strong></li>
+                                    <li>Processor Type<strong>XEON L5639</strong></li>
+                                    <li>Memory<strong>16 GB</strong></li>
+                                    <li>Bandwidth<strong>Unlimited</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pt-footer"> <a href="#" class="btn btn-custom">Buy Now</a> </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="pricing-table-item">
+                        <div class="pt-head">
+                            <div class="caption">Starting At</div>
+                            <div class="pt-price-tag">$179<span>/mo</span></div>
+                            <div class="pt-plan">Pro Plus</div>
+                        </div>
+                        <div class="pt-body">
+                            <div class="pt-features">
+                                <ul>
+                                    <li>Number of Concurrent Calls<strong>450 Concurrent Calls</strong></li>
+                                    <li>Number of Processing Cores<strong>24 Cores</strong></li>
+                                    <li>Processor Type<strong>XEON L5639</strong></li>
+                                    <li>Memory<strong>24 GB</strong></li>
+                                    <li>Bandwidth<strong>Unlimited</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pt-footer"> <a href="#" class="btn btn-custom">Buy Now</a> </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="pricing-table-item">
+                        <div class="pt-head">
+                            <div class="caption">Starting At</div>
+                            <div class="pt-price-tag">$499<span>/mo</span></div>
+                            <div class="pt-plan">Enterprise</div>
+                        </div>
+                        <div class="pt-body">
+                            <div class="pt-features">
+                                <ul>
+                                    <li>Number of Concurrent Calls<strong>1000 Concurrent Calls</strong></li>
+                                    <li>Number of Processing Cores<strong>32 Cores</strong></li>
+                                    <li>Processor Type<strong>XEON L5639</strong></li>
+                                    <li>Memory<strong>32 GB</strong></li>
+                                    <li>Bandwidth<strong>Unlimited</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pt-footer"> <a href="#" class="btn btn-custom">Buy Now</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="brands">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="section-title">
+                        <h2>Over 100,000 companies rely on Nextiva for their business VoIP communication in the cloud</h2> </div>
+                </div>
+            </div>
+            <div class="row brands-slider reset-margin">
+                <div class="col-md-12"> <img src="img/brands-img/01.png" alt="" class="img-responsive"> </div>
+                <div class="col-md-12"> <img src="img/brands-img/02.png" alt="" class="img-responsive"> </div>
+                <div class="col-md-12"> <img src="img/brands-img/03.png" alt="" class="img-responsive"> </div>
+                <div class="col-md-12"> <img src="img/brands-img/04.png" alt="" class="img-responsive"> </div>
+                <div class="col-md-12"> <img src="img/brands-img/05.png" alt="" class="img-responsive"> </div>
+                <div class="col-md-12"> <img src="img/brands-img/06.png" alt="" class="img-responsive"> </div>
+            </div>
+        </div>
+    </div>
+    <div id="testimonial" data-bg-src="img/testimonial-img/bg.jpg">
+        <div class="section-title">
+            <h2>testimonial</h2> </div>
+        <div class="testimonial-slider">
+            <div class="testimonial-item" data-recommender-thumb="img/testimonial-img/01.jpg">
+                <div class="recommender-comment">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum similique ad, magnam, odit repellat reprehenderit. Consequatur consectetur aspernatur ad assumenda a. Aspernatur fugit numquam quod rerum sint facere ex ullam. A, blanditiis quod, tempore magni veniam perferendis aliquid vitae saepe.</p>
+                </div>
+                <div class="recommender-info"> <span class="recommender-name">Mohammad Al Omayer,</span> <span class="recommender-role">Company</span> </div>
+            </div>
+            <div class="testimonial-item" data-recommender-thumb="img/testimonial-img/02.jpg">
+                <div class="recommender-comment">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum similique ad, magnam, odit repellat reprehenderit. Consequatur consectetur aspernatur ad assumenda a. Aspernatur fugit numquam quod rerum sint facere ex ullam. A, blanditiis quod, tempore magni veniam perferendis aliquid vitae saepe.</p>
+                </div>
+                <div class="recommender-info"> <span class="recommender-name">Mohammad Al Omayer,</span> <span class="recommender-role">Company</span> </div>
+            </div>
+            <div class="testimonial-item" data-recommender-thumb="img/testimonial-img/03.jpg">
+                <div class="recommender-comment">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum similique ad, magnam, odit repellat reprehenderit. Consequatur consectetur aspernatur ad assumenda a. Aspernatur fugit numquam quod rerum sint facere ex ullam. A, blanditiis quod, tempore magni veniam perferendis aliquid vitae saepe.</p>
+                </div>
+                <div class="recommender-info"> <span class="recommender-name">Mohammad Al Omayer,</span> <span class="recommender-role">Company</span> </div>
+            </div>
+        </div>
+    </div>
+    <div id="ratesInfo">
+        <div class="container">
+            <div class="rates-info--wrapper" data-bg-src="{{ asset('img/rates-info-img/world-map.svg') }}">
+                <div class="rates-info--items">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="rates-info--item">
+                                <h3><strong>Free</strong>Calling to the US &amp; Canada from Anywhere in the World.</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa minus obcaecati reiciendis, recusandae!</p><a href="#" class="btn btn-custom-reverse">Try It Free</a> </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="rates-info--item bg--black">
+                                <h3><strong>Free</strong>magicJack to magicJack International Calling.</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa minus obcaecati reiciendis, recusandae!</p><a href="#" class="btn btn-custom-reverse">Try It Free</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @stop
+
