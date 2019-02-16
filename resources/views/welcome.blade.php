@@ -25,7 +25,7 @@
                         <div class="col-md-7 header-item-img hidden-sm hidden-xs">
                             <div class="vc-parent">
                                 <div class="vc-child-bottom">
-                                    <figure class="clearfix"> <img src="img/header-slider-img/01.png" alt="" class="img-responsive owl-fadeInUp">
+                                    <figure class="clearfix"> <img src="img/header-slider-img/04.jpg" alt="" class="img-responsive owl-fadeInUp">
                                         <figcaption>
                                             <div class="header-price-tag header-price-tag-1 owl-fadeInLeft">
                                                 <p>Starting at<span>$4.99</span>/year</p>
@@ -228,7 +228,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-5 single-feature--image">
-                    <figure> <img src="img/single-feature-img/01.png" alt="" class="img-responsive">
+                    <figure> <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container">
+                          <div class="tradingview-widget-container__widget"></div>
+                          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+                          {
+                          "width": 425,
+                          "height": 410,
+                          "symbol": "NASDAQ:AAPL",
+                          "locale": "en",
+                          "interval": "1D"
+                        }
+                          </script>
+                        </div>
+                        <!-- TradingView Widget END -->
                         <figcaption class="single-feature--price"> <span>Price</span>
                             <p>$9.99</p><span>USD</span> </figcaption>
                     </figure>
@@ -246,71 +259,30 @@
         </div>
     </div>
     <div id="phoneNumPrices">
-        <div class="container">
-            <div class="section-title">
-                <h2>Phone Number Prices</h2> </div>
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="p-num-prices--form">
-                        <form action="#" method="get">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <h4>Where would you like to have a phone number?</h4>
-                                        <select class="PNumStockCountry SelectMenu"></select>
-                                        <select class="PNumStockCategory SelectMenu"></select>
-                                        <select name="chosenNumber" class="PNumStockNumbers SelectMenu"></select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <h4>Select a plan</h4>
-                                        <select name="chosenPlan" class="PNumPricePlans SelectMenu">
-                                            <option value="Standard;0" selected>Standard - Free (Monthly)</option>
-                                            <option value="Premium;9.95">Premium - $9.95 (Monthly)</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <h4>Where should incoming calls be forwarded to?</h4>
-                                        <select class="PNumCallFPrices SelectMenu">
-                                            <option value="0" selected>Your Country</option>
-                                        </select>
-                                        <div class="p-num--cf-slider PNumCallFSlider"></div>
-                                        <div class="p-num--cf-slider-text">
-                                            <p><span class="PNumCallFMinutes">0</span> minutes</p><small>incoming calls per month.</small> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="p-num-prices--panel">
-                        <h3>Price</h3>
-                        <table class="PNumPricesPanelTable">
-                            <tbody>
-                                <tr class="PNumSetupFee">
-                                    <td></td>
-                                </tr>
-                                <tr class="PNumPlanPrice">
-                                    <td></td>
-                                </tr>
-                                <tr class="PNumMonthlyFee">
-                                    <td></td>
-                                </tr>
-                                <tr class="PNumInCallsPrice">
-                                    <td></td>
-                                </tr>
-                                <tr class="PNumCallFPrice">
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p class="sum PNumPricesSum"></p>
-                        <p class="sum-caption">Estimated monthly cost</p><a href="signup.html" class="signup--btn">Signup &amp; Try It Free</a> </div>
-                </div>
-            </div>
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+          <div id="tradingview_d10ac"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+          <script type="text/javascript">
+          new TradingView.widget(
+          {
+          "width": 1300,
+          "height": 600,
+          "symbol": "EURUSD",
+          "interval": "60",
+          "timezone": "Etc/UTC",
+          "theme": "Light",
+          "style": "1",
+          "locale": "en",
+          "toolbar_bg": "rgba(152, 152, 152, 1)",
+          "enable_publishing": false,
+          "allow_symbol_change": true,
+          "container_id": "tradingview_d10ac"
+        }
+          );
+          </script>
         </div>
+        <!-- TradingView Widget END -->
     </div>
     <div class="single-feature" data-bg-src="img/background-img/single-feature-1-bg.png">
         <div class="container">

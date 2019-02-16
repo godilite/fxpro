@@ -65,7 +65,7 @@
         <nav id="primaryMenu" class="navbar">
             <div class="container">
                 <div class="primary--logo">
-                    <a href="/"><img src="{{ asset('img/logo.png') }}" alt="FXPro Logo" /></a>
+                    <a href="/"><img src="{{ asset('img/logo.png') }}" width="100px" alt="FXPro Logo" /></a>
                 </div>
                 <div class="primary--info clearfix">
                     <div class="primary--info-item">

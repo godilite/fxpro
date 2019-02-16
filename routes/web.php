@@ -16,10 +16,16 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+//Front End Routes
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/frontend/contact', 'FrontendController@contact')->name('contact');
 Route::get('/frontend/about', 'FrontendController@about')->name('about');
 Route::get('contact-us', 'ContactUSController@contactUS');
 Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
 Route::post('subscribe',['as'=>'subscriber','uses'=>'ContactUSController@subscribe']);
+
+//Dashboard Routes
+
+Route::get('dashboard', ['uses'=>'HomeController@index', 
+'as'=>'dashboard'
+]);
