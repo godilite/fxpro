@@ -53,7 +53,7 @@
                     <div class="pt-footer"> 
                             <form method="POST" action="{{ route('pay') }}" accept-charset="UTF-8" class="form-horizontal" role="form">
                                     
-                                        <input type="hidden" name="email" value="accounts@525system.com"> {{-- required --}}
+                                        <input type="hidden" name="email" value="godilite@gmail.com"> {{-- required --}}
                                         <input type="hidden" name="orderID" value="123">
                                         <input type="hidden" name="amount" value="178485"> {{-- required in kobo --}}
                                         <input type="hidden" name="quantity" value="1">
@@ -188,7 +188,7 @@
                     </div>
                     <div class="pt-footer"> <form method="POST" action="{{ route('pay') }}" accept-charset="UTF-8" class="form-horizontal" role="form">
                                     
-                            <input type="hidden" name="email" value="accounts@525system.com"> {{-- required --}}
+                            <input type="hidden" name="email" value="godilite@gmail.com"> {{-- required --}}
                             <input type="hidden" name="orderID" value="123">
                             <input type="hidden" name="amount" value="7295255"> {{-- required in kobo --}}
                             <input type="hidden" name="quantity" value="1">

@@ -237,6 +237,7 @@
     <script src="{{ asset('js/jquery.ui.touch-punch.min.js') }}"></script>
     <script src="{{ asset('js/retina.min.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+    <script id="dsq-count-scr" src="//fxpro-consult.disqus.com/count.js" async></script>
 </body>
 
 </html>
