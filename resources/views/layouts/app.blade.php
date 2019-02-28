@@ -24,14 +24,9 @@
 </head>
 
 <body>
-    <div id="preloader">
-        <div class="preloader--spinners">
-            <div class="preloader--spinner preloader--spinner-1"></div>
-            <div class="preloader--spinner preloader--spinner-2"></div>
-        </div>
-    </div>
+  
     <div id="menu">
-        <div class="menu--topbar">
+        {{--  <div class="menu--topbar">
             <div class="container">
                 <ul class="menu-topbar--social nav navbar-nav hidden-xs">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -61,13 +56,83 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <nav id="primaryMenu" class="navbar">
+        </div>  --}}
+        <nav id="primaryMenu" class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
-                <div class="primary--logo">
-                    <a href="/"><img src="{{ asset('img/logo.png') }}" width="100px" alt="FXPro Logo" /></a>
-                </div>
-                <div class="primary--info clearfix">
+                <div class="primary-menu--wrapper">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#secondaryNavbar" aria-expanded="false" aria-controls="secondaryNavbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                            <div class="login-btn hidden-lg hidden-md"> 
+                                @if (Route::has('login'))
+                                @auth
+                                   <a href="/home">Dashboard</a>     
+                                  @else
+                                  <a href="{{ route('login') }}"><i class="fa fa-user-plus"></i>Login</a> 
+                                    @if (Route::has('register'))
+                                       <a href="{{ route('register') }}"><i class="fa fa-user-plus"></i>Try for free</a>
+                                    @endif
+                                @endauth
+                                @endif
+                                   </div>
+    
+                        </div>
+                        <div id="secondaryNavbar" class="reset-padding navbar-collapse collapse">
+                            <ul class="secondary-menu-links nav navbar-nav">
+                                <li class="text-left"><a href="/"><img src="{{ asset('img/logo.png') }}" width="100px" alt="FXPro Logo" /></a>
+                                </li>
+                            </ul><br>
+                            <ul class="secondary-menu-links nav navbar-nav" style="float:right;font-size:100px;">
+                                
+                                <li class="active"><a href="/">HOME</a></li>
+                                <li class="dropdown"> <a href="#" data-toggle="dropdown">ABOUT US<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{{ route('about') }}">WHY US</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">SERVICES</a></li>
+                                <li><a href="{{ route('frontend.tradesplash',['slug'=>'tradesplash'])}}">TRADE SPLASH</a></li>
+                                <li><a href="{{ route('frontend.tradesplash',['slug'=>'blog'])}}">BLOG</a></li>
+                                <li><a href="#">COURSES</a></li>
+                                <li><a href="{{ route('contact') }}">CONTACT</a></li>
+                            </ul>
+                                                                <!-- TradingView Widget BEGIN -->
+                                    <div class="tradingview-widget-container">
+                                    <div class="tradingview-widget-container__widget"></div>
+                                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                                    {
+                                    "symbols": [
+                                        {
+                                        "title": "S&P 500",
+                                        "proName": "INDEX:SPX"
+                                        },
+                                        {
+                                        "title": "Shanghai Composite",
+                                        "proName": "INDEX:XLY0"
+                                        },
+                                        {
+                                        "title": "EUR/USD",
+                                        "proName": "FX_IDC:EURUSD"
+                                        },
+                                        {
+                                        "title": "BTC/USD",
+                                        "proName": "BITFINEX:BTCUSD"
+                                        },
+                                        {
+                                        "title": "ETH/USD",
+                                        "proName": "BITFINEX:ETHUSD"
+                                        }
+                                    ],
+                                    "theme": "light",
+                                    "isTransparent": false,
+                                    "displayMode": "adaptive",
+                                    "locale": "en"
+                                    }
+                                    </script>
+                                    </div>
+                                    <!-- TradingView Widget END -->
+                        </div>
+                    </div>
+                {{--  <div class="primary--info clearfix">
                     <div class="primary--info-item">
                         <div class="primary--icon"> <i class="fa fa-headphones"></i> </div>
                         <div class="primary--content">
@@ -89,57 +154,14 @@
                             <p>Lorem ipsum dolor</p>
                         </div>
                     </div>
-                </div>
+                </div>  --}}
             </div>
         </nav>
-        <nav id="secondaryMenu" class="navbar">
+        {{--  <nav id="secondaryMenu" class="navbar">
             <div class="container">
-                <div class="secondary-menu--wrapper">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#secondaryNavbar" aria-expanded="false" aria-controls="secondaryNavbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                        <div class="login-btn hidden-lg hidden-md"> 
-                            @if (Route::has('login'))
-                            @auth
-
-                            @else
-        
-                                @if (Route::has('register'))
-                                   <a href="{{ route('register') }}"><i class="fa fa-user-plus"></i>Try for free</a>
-                                @endif
-                            @endauth
-                            @endif
-                               </div>
-
-                    </div>
-                    <div id="secondaryNavbar" class="reset-padding navbar-collapse collapse">
-                        <ul class="secondary-menu-links nav navbar-nav">
-                            <li class="active"><a href="/">HOME</a></li>
-                            <li class="dropdown"> <a href="#" data-toggle="dropdown">ABOUT US<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="{{ route('about') }}">WHY US</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">INVESTING</a></li>
-                            <li><a href="#">TRADING</a></li>
-                            <li><a href="#">BLOG</a></li>
-                            <li><a href="#">COURSES</a></li>
-                            <li><a href="{{ route('contact') }}">CONTACT</a></li>
-                        </ul>
-                        <ul class="secondary-menu-links nav navbar-nav navbar-right hidden-xs hidden-sm">
-                            @if (Route::has('login'))
-                            @auth
-                               <li><a href="{{ url('/home') }}" class="btn">Home</a></li>
-                            @else
-                                @if (Route::has('register'))
-                                   <li><a href="{{ route('register') }}" class="btn"><span>Try It Free</span></a></li>
-                                @endif
-                            @endauth
-                            @endif 
-                        </ul>
-                    </div>
-                </div>
+                
             </div>
-        </nav>
+        </nav>  --}}
     </div>
     @if(Session::has('success'))
    <div class="alert alert-success">
@@ -199,7 +221,7 @@
     </div>
     <div id="copyright">
         <div class="container">
-            <p class="left">Copyright 2017 &copy; <a href="#">VOIP</a>. All Rights Reserved.</p>
+            <p class="left">Copyright 2017 &copy; <a href="#">FXPro</a>. All Rights Reserved.</p>
             <p class="right">We Accept: <img src="{{ asset('img/payment-methods.png') }}" alt=""></p>
         </div>
     </div>

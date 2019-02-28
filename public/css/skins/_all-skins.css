@@ -485,7 +485,7 @@ Primary use:	Fox Admin - Responsive Admin Template
 /*---Skin: Red---*/
 
 .skin-red .main-header .navbar {
-  background-color: #fc4b6c;
+  background-color: #f00;
 }
 .skin-red .main-header .navbar .nav > li > a {
   color: #ffffff;
@@ -512,7 +512,7 @@ Primary use:	Fox Admin - Responsive Admin Template
   color: #fff;
 }
 .skin-red .main-header .navbar .sidebar-toggle:hover {
-  background-color: #e03656;
+  background-color: #f00;
 }
 @media (max-width: 767px) {
   .skin-red .main-header .navbar .dropdown-menu li.divider {
@@ -522,16 +522,16 @@ Primary use:	Fox Admin - Responsive Admin Template
     color: #444;
   }
   .skin-red .main-header .navbar .dropdown-menu li a:hover {
-    background: #e03656;
+    background: #f00;
   }
 }
 .skin-red .main-header .logo {
-  background-color: #e03656;
+  background-color: #f00;
   color: #ffffff;
   border-bottom: 0 solid transparent;
 }
 .skin-red .main-header .logo:hover {
-  background-color: #fc4b6c;
+  background-color: #f00;
 }
 .skin-red .main-header li.user-header {
   background-color: #fff;
@@ -545,7 +545,7 @@ Primary use:	Fox Admin - Responsive Admin Template
 .skin-red .wrapper,
 .skin-red .main-sidebar,
 .skin-red .left-side {
-  background-color: #2f323e;
+  background-color: #28375a;
   box-shadow: 1px 0px 20px rgba(0,0,0,0.08);
 }
 .skin-red .user-panel > .info,
@@ -554,7 +554,7 @@ Primary use:	Fox Admin - Responsive Admin Template
 }
 
 .skin-red .sidebar-menu > li.header {
-  color: #97999f;
+  color: #fff;
 }
 .skin-red .sidebar-menu > li > a {
   border-left:none;
@@ -563,17 +563,17 @@ Primary use:	Fox Admin - Responsive Admin Template
 .skin-red .sidebar-menu > li.active > a,
 .skin-red .sidebar-menu > li.menu-open > a {
   color: #ffffff;
-  background: #fc4b6c;
+  background: #f00;
 }
 .skin-red .sidebar-menu > li.active > a {
-  border-left-color: #fc4b6c;
+  border-left-color: #fff;
 }
 .skin-red .sidebar-menu > li > .treeview-menu {
   margin: 0 0px;
-  background: #2f323e;
+  background: #28375a;
 }
 .skin-red .sidebar a {
-  color: #97999f;
+  color: #fff;
 }
 .skin-red .sidebar a:hover {
   text-decoration: none;
@@ -615,24 +615,24 @@ Primary use:	Fox Admin - Responsive Admin Template
   border-bottom-left-radius: 0;
 }
 .skin-red.layout-top-nav .main-header > .logo {
-  background-color: #e03656;
+  background-color: #f00;
   color: #ffffff;
   border-bottom: 0 solid transparent;
 }
 .skin-red.layout-top-nav .main-header > .logo:hover {
-  background-color: #fc4b6c;
+  background-color: #f00;
 }
 .skin-red .btn-blue{
-	background-color: #fc4b6c;
+	background-color: #f00;
 	color: #fff;
-	border: 1px solid #fc4b6c;
+	border: 1px solid #f00;
 }
 .skin-red .btn-blue:hover{
 	background-color: #fff;
-	color: #fc4b6c;	
+	color: #fff;	
 }
 .horizontal-menu .skin-red.layout-top-nav .sidebar-menu > li.active > a {
-    background: #fc4b6c;
+    background: #f00;
 	color: #fff;
 }
 

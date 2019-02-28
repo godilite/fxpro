@@ -12,9 +12,11 @@
         "bogardo/mailgun": "^5.0",
         "fideloper/proxy": "^4.0",
         "guzzlehttp/guzzle": "^6.3",
+        "jrm2k6/cloudder": "^0.6.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
-        "laravelcollective/html": "^5.7"
+        "laravelcollective/html": "^5.7",
+        "unicodeveloper/laravel-paystack": "^1.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

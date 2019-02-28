@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'first_name', 'last_name', 'phone', 'email', 'password','reference'
     ];
 
     /**
@@ -27,4 +27,46 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function profile(){
+        return $this->hasOne('App\Profile');
+    }
+    
+    public function payment()
+    {
+        return $this->hasOne('App\Payment');
+    }
+    
+    
+    public function posts()
+    {
+        return $this->hasMany('App\Post');
+    }
+    
+    
+    public function discussions()
+    {
+        return $this->hasMany('App\Discussion');
+    }
+
+    
+    public function replies()
+    {
+        return $this->hasMany('App\Reply');
+    }
+    public function role()
+    {
+        return $this->belongsToMany(Role::class, 'role_user');
+    }
+
+
+    public function isAdmin()
+    {
+        return $this->role()->where('role_id', 1)->first();
+    }
+
+    public function lessons()
+    {
+        return $this->belongsToMany('App\Lesson', 'lesson_student');
+    }   
 }

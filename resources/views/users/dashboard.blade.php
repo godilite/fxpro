@@ -172,8 +172,39 @@
                         </div>
                       </div>
                   </div>
-        <!-- /.col -->
+                  <div class="box box-default">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">Course Categories</h3>
+        
+                      <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                      <div class="row">
+                        <ul class="users-list clearfix">
+                          <li>
+                            <img src="images/user1-128x128.jpg" alt="User Image">
+                            <a class="users-list-name" href="#">Arijit Sinh</a>
+                            <span class="users-list-date">Today</span>
+                          </li>
+                      
+                          <li>
+                            <img src="images/user3-128x128.jpg" alt="User Image">
+                            <a class="users-list-name" href="#">Juliya</a>
+                            <span class="users-list-date">15 Jan</span>
+                          </li>
+                          </ul>
+
+                      </div>
+                    </div>
+                </div>
+      
+        
             </div>
+      
         
         <div class="col-xl-4 connectedSortable">
           <!-- weather -->
